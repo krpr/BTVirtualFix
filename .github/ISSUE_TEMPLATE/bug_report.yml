@@ -1,0 +1,47 @@
+name: Bug or compatibility report / 问题反馈
+description: Report a build failure, initialization failure, or compatibility question.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        English or Chinese is welcome. This is an experimental, exact-build workaround.
+        Do not upload a full config.plist, Apple binary, generated reference header, disk image, or raw log archive.
+        Remove addresses, usernames, serial numbers, EFI identifiers, and tokens from excerpts.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category / 问题类型
+      options:
+        - Build or tooling failure
+        - Bluetooth initialization or service stability
+        - Compatibility request
+        - CPU measurement or other behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Versions and environment / 版本与环境
+      description: Include macOS version and build, Darwin version, architecture, BTVirtualFix version, Lilu/OpenCore versions, and VM platform. No machine-specific identifiers.
+      placeholder: "macOS 15.4.1 (24E263), Darwin 24.4.0, x86_64; BTVirtualFix 0.1.1; ..."
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior / 预期与实际
+      description: Describe the exact failing step and how to reproduce it. Mention whether real Bluetooth hardware is present and whether VMHide is used.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Minimal evidence / 最小证据
+      description: Paste short sanitized error messages, relevant hashes, or test results. For CPU reports, state the sampling duration, interval, logical CPU count, and percentage units.
+      render: text
+  - type: textarea
+    id: recent_changes
+    attributes:
+      label: Recent changes / 最近修改
+      description: Mention OS updates or related kext/configuration changes. Share only the relevant configuration fields, not the complete configuration.

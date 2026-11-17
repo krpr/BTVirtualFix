@@ -1,0 +1,23 @@
+name: Source checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guard-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Reference generator rejection tests
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Check optimized Python keeps rejection checks
+        run: python3 -O -m unittest discover -s tests -p 'test_prepare_reference.py' -v
+      - name: Guard tests with synthetic pages and sanitizers
+        run: python3 scripts/test_guards.py --synthetic
+      - name: Ensure CI did not generate private Apple reference pages
+        run: test ! -e Sources/ReferencePage.hpp

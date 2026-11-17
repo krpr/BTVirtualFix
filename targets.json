@@ -1,0 +1,31 @@
+{
+  "darwin": "24.4.0",
+  "macos": "15.4.1",
+  "build": "24E263",
+  "path": "/usr/sbin/bluetoothd",
+  "architecture": "x86_64",
+  "universal_sha256": "ac139b25e538e1e6672ff09a064198bcabda4a6eb1e1f5cd00fa53636380d348",
+  "thin_sha256": "5bbdbf61bccb453da4c37e6e9c71909c1e64b8d286917c0bb37c015caced801e",
+  "x86_64_uuid": "4ff3b4ddbcb23a24a026bf49e69b76e4",
+  "slice_offset": 16384,
+  "pages": [
+    {
+      "name": "Activation",
+      "purpose": "internal diagnostics branch exception",
+      "thin_signature_offset": 4263764,
+      "find_hex": "e8f766f2ff488b084889c7ff510884c00f8481010000488d3da2f24300488d35fda24b00e8b11c3d0084c00f840b010000",
+      "replace_hex": "e8f766f2ff488b084889c7ff510884c0909090909090488d3da2f24300488d35fda24b00e8b11c3d0084c00f840b010000",
+      "page_sha256": "60c52b5c1957da4228a45716f3e3e89a3827b4667f60dfa043bdc0ac6b8f16b7",
+      "changed_offsets": [3940, 3941, 3942, 3943, 3944, 3945]
+    },
+    {
+      "name": "ReadUHE",
+      "purpose": "APPLE_VIRTUAL Read UHE exclusion",
+      "thin_signature_offset": 1327861,
+      "find_hex": "e88f05ffff3d7017000072d8",
+      "replace_hex": "e88f05ffff3d7017000076d8",
+      "page_sha256": "0aaad511812bf37c17c73bb90b14bfa6343e9182bedca7941b28348e97d5d407",
+      "changed_offsets": [767]
+    }
+  ]
+}

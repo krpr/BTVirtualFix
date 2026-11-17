@@ -1,0 +1,10 @@
+{
+  "Lilu": {
+    "url": "https://github.com/acidanthera/Lilu.git",
+    "commit": "e4748cc081bf060302c7d3c44a643ce1d11b7e1d"
+  },
+  "MacKernelSDK": {
+    "url": "https://github.com/acidanthera/MacKernelSDK.git",
+    "commit": "3f750085caa17ec3a7880f11c11bf4f48cd6a164"
+  }
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Merge selected entries into a backed-up configuration; this is NOT a complete config.plist. Preserve existing boot arguments and all unrelated entries. -->
+<plist version="1.0">
+<dict>
+	<key>Kernel</key>
+	<dict>
+		<key>Patch</key>
+		<array>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Base</key>
+				<string></string>
+				<key>Comment</key>
+				<string>VMHide 1.1.3: expose VM status to bluetoothd, 24E263 only</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				Ymx1ZXRvb3RoZAA=
+				</data>
+				<key>Identifier</key>
+				<string>org.Carnations.VMHide</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>
+				</data>
+				<key>MaxKernel</key>
+				<string>24.4.0</string>
+				<key>MinKernel</key>
+				<string>24.4.0</string>
+				<key>Replace</key>
+				<data>
+				YnR2bV9ub2hpdAA=
+				</data>
+				<key>ReplaceMask</key>
+				<data>
+				</data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

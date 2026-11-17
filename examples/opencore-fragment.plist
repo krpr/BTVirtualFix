@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Merge selected entries into a backed-up configuration; this is NOT a complete config.plist. Preserve existing boot arguments and all unrelated entries. -->
+<plist version="1.0">
+<dict>
+	<key>Kernel</key>
+	<dict>
+		<key>Add</key>
+		<array>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>BTVirtualFix-v0.1.1.kext</string>
+				<key>Comment</key>
+				<string>BTVirtualFix 0.1.1: native virtual Bluetooth, 24E263 only</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/BTVirtualFix</string>
+				<key>MaxKernel</key>
+				<string>24.4.0</string>
+				<key>MinKernel</key>
+				<string>24.4.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+		</array>
+	</dict>
+	<key>NVRAM</key>
+	<dict>
+		<key>Add</key>
+		<dict>
+			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
+			<dict>
+				<key>boot-args</key>
+				<string>bt-transport-override=10 -btvirtfix</string>
+			</dict>
+		</dict>
+		<key>Delete</key>
+		<dict>
+			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
+			<array>
+				<string>boot-args</string>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>
